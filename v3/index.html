@@ -6,22 +6,23 @@
 <style>
 /* ============================================================
    V2.1 "SIGNAL" — dark, committed. Emerald is the only accent.
-   #2ECC71 = outcomes and stats · #00A86B = structure and indices
+   #00875A carries text weight, #2ECC71 is the vivid fill
    No clip-path anywhere: transform/opacity/filter only.
    ============================================================ */
 :root{
-  color-scheme:dark;
-  --bg:#0A0C0B;
-  --tile:#121614;
-  --tile-hi:#171D19;
-  --ink:#F2F5F3;
-  --body:#9BA5A0;
-  --muted:#6E7975;
-  --line:#1F2623;
-  --line-hi:#2E3733;
-  --acc:#2ECC71;
-  --acc-deep:#00A86B;
-  --acc-rgb:46,204,113;
+  color-scheme:light;
+  --bg:#F3F6F3;
+  --tile:#FFFFFF;
+  --tile-hi:#F8FBF8;
+  --ink:#111713;
+  --body:#4B534D;
+  --muted:#79827B;
+  --line:#E2E8E1;
+  --line-hi:#CBD3CA;
+  --acc:#00875A;
+  --acc-deep:#0B6647;
+  --acc-hi:#2ECC71;
+  --acc-rgb:0,135,90;
 
   --f-disp:"Bricolage Grotesque","Archivo",system-ui,sans-serif;
   --f-body:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
@@ -48,7 +49,7 @@ p{margin:0}
 h1,h2,h3,h4{margin:0;font-family:var(--f-disp);color:var(--ink);font-weight:700;letter-spacing:-.025em;text-wrap:balance}
 button{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--acc);outline-offset:3px}
-::selection{background:var(--acc);color:#06120C}
+::selection{background:var(--acc);color:#fff}
 ::-webkit-scrollbar{width:8px;height:8px}
 ::-webkit-scrollbar-track{background:transparent}
 ::-webkit-scrollbar-thumb{background:var(--line-hi);border-radius:8px}
@@ -147,7 +148,7 @@ html.js [data-anim="zoom"].on{opacity:1;transform:none;transition:opacity .6s ea
 }
 
 /* ============ NAV ============ */
-.prog{position:fixed;inset:0 auto auto 0;height:2px;width:100%;z-index:80;background:linear-gradient(90deg,var(--acc-deep),var(--acc));transform:scaleX(0);transform-origin:0 50%}
+.prog{position:fixed;inset:0 auto auto 0;height:2px;width:100%;z-index:80;background:linear-gradient(90deg,var(--acc),var(--acc-hi));transform:scaleX(0);transform-origin:0 50%}
 .nav{
   position:sticky;top:0;z-index:60;
   background:color-mix(in srgb,var(--bg) 82%,transparent);
@@ -172,11 +173,11 @@ html.js [data-anim="zoom"].on{opacity:1;transform:none;transition:opacity .6s ea
 .btn{
   display:inline-flex;align-items:center;gap:.5em;text-decoration:none;cursor:pointer;
   font-family:var(--f-mono);font-size:12px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;
-  background:var(--acc);color:#06120C;border:1px solid var(--acc);border-radius:var(--r);
+  background:var(--acc);color:#fff;border:1px solid var(--acc);border-radius:var(--r);
   padding:.78em 1.15em;transition:transform .35s var(--spring),box-shadow .35s var(--ease),background .25s,color .25s;
 }
 .btn .arw{transition:transform .35s var(--spring);display:inline-block}
-.btn:hover{background:#3EE083;border-color:#3EE083;transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(var(--acc-rgb),.85)}
+.btn:hover{background:#00996B;border-color:#00996B;transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(var(--acc-rgb),.85)}
 .btn:hover .arw{transform:translateX(4px)}
 .btn--line{background:transparent;color:var(--ink);border-color:var(--line-hi)}
 .btn--line:hover{background:transparent;border-color:var(--acc);color:var(--acc);box-shadow:none}
@@ -196,10 +197,10 @@ html.js [data-anim="zoom"].on{opacity:1;transform:none;transition:opacity .6s ea
 .hero__id{display:flex;align-items:center;gap:15px;margin-bottom:22px}
 .hero__id img{
   width:84px;height:84px;flex:none;border-radius:50%;object-fit:cover;object-position:50% 15%;
-  box-shadow:0 0 0 1px var(--line-hi),0 0 0 5px var(--bg),0 0 0 6px rgba(var(--acc-rgb),.5),0 16px 34px -18px #000;
+  box-shadow:0 0 0 1px var(--line-hi),0 0 0 5px var(--bg),0 0 0 6px rgba(var(--acc-rgb),.5),0 16px 34px -18px rgba(17,23,19,.22);
   transition:transform .5s var(--spring),box-shadow .5s var(--ease);
 }
-.hero__id img:hover{transform:scale(1.05) rotate(-2deg);box-shadow:0 0 0 1px var(--line-hi),0 0 0 5px var(--bg),0 0 0 7px var(--acc),0 20px 40px -18px #000}
+.hero__id img:hover{transform:scale(1.05) rotate(-2deg);box-shadow:0 0 0 1px var(--line-hi),0 0 0 5px var(--bg),0 0 0 7px var(--acc),0 20px 40px -18px rgba(17,23,19,.22)}
 .hero__id .eyebrow{line-height:1.7;white-space:nowrap}
 .hero h1{
   font-size:clamp(34px,5.4vw,66px);line-height:1.0;letter-spacing:-.038em;
@@ -306,7 +307,7 @@ html.js .panel.swap{opacity:0;transform:translateY(12px)}
 .tenet p{font-size:14px;line-height:1.55;color:var(--body)}
 
 /* ============ AI ============ */
-.ai{border:1px solid var(--line);border-radius:var(--r);background:var(--tile);padding:clamp(20px,2.6vw,34px)}
+.ai{border:1px solid rgba(var(--acc-rgb),.2);border-radius:var(--r);background:color-mix(in srgb,var(--acc) 6%,var(--tile));padding:clamp(20px,2.6vw,34px)}
 .ai h2{font-size:clamp(21px,2.6vw,32px);line-height:1.1;max-width:22ch;margin-bottom:12px}
 .ai__lede{font-size:15px;max-width:62ch;margin-bottom:24px}
 .ai__row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
@@ -377,7 +378,7 @@ html.js .panel.swap{opacity:0;transform:translateY(12px)}
 .foot__in b{color:var(--ink);font-weight:700}
 
 .skip{position:absolute;left:-9999px}
-.skip:focus{left:var(--gut);top:8px;z-index:99;background:var(--acc);color:#06120C;padding:9px 13px}
+.skip:focus{left:var(--gut);top:8px;z-index:99;background:var(--acc);color:#fff;padding:9px 13px}
 
 /* ---- icons: Lucide/Tabler outlined, 24 grid ---- */
 .ic{width:20px;height:20px;flex:none;stroke:currentColor;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
@@ -388,7 +389,7 @@ html.js .panel.swap{opacity:0;transform:translateY(12px)}
 .btn .ic{width:15px;height:15px;stroke-width:2;transition:transform .35s var(--spring)}
 .btn:hover .ic{transform:translateX(3px)}
 .tile__ic{width:42px;height:42px;border-radius:var(--r);display:grid;place-items:center;background:rgba(var(--acc-rgb),.12);color:var(--acc);margin-bottom:4px;transition:background .4s var(--ease),color .4s var(--ease)}
-.tile:hover .tile__ic{background:var(--acc);color:#06120C}
+.tile:hover .tile__ic{background:var(--acc);color:#fff}
 .panel h4{display:flex;align-items:center;gap:7px}
 .panel h4 .ic{width:14px;height:14px;stroke-width:2;color:var(--acc)}
 .panel li{padding-left:22px}
@@ -406,10 +407,10 @@ html.js .panel.swap{opacity:0;transform:translateY(12px)}
 .cl>.ic{width:17px;height:17px;color:var(--acc);margin-top:14px}
 
 /* ---- company marks: one uniform cream tile, initials only ---- */
-.lg,.role .lg{width:36px;height:36px;flex:none;border-radius:8px;background:#FAF8F3;color:#191B17;
+.lg,.role .lg{width:36px;height:36px;flex:none;border-radius:8px;background:#FBFAF5;color:var(--ink);
     display:inline-flex;align-items:center;justify-content:center;line-height:1;
     font-family:var(--f-mono);font-size:12px;font-weight:700;letter-spacing:.06em;
-    box-shadow:0 0 0 1px rgba(250,248,243,.22);transition:box-shadow .4s var(--ease),transform .45s var(--spring)}
+    box-shadow:0 0 0 1px var(--line-hi);transition:box-shadow .4s var(--ease),transform .45s var(--spring)}
 .role{display:flex;gap:12px;align-items:flex-start}
 .role:hover .lg{transform:scale(1.05);box-shadow:0 0 0 1px var(--em,var(--acc))}
 
