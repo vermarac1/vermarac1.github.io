@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="14 2 172 188" width="172" height="188">
+  <g transform="rotate(32 104 64)">
+    <ellipse cx="104" cy="64" rx="38" ry="57" fill="#F6B7CB" stroke="#2A2F45" stroke-width="3"/>
+  </g>
+  <g fill="#4C5880">
+    <path d="M80 70 C78 46 100 30 122 38 C108 40 99 50 99 62 C99 70 95 76 88 80 C84 78 81 75 80 70 Z"/>
+    <path d="M128 58 C130 82 108 98 86 90 C100 88 109 78 109 66 C109 58 113 52 120 48 C124 50 127 53 128 58 Z"/>
+    <path d="M91 84 C93 89 94 94 91 97 C88 94 89 89 91 84 Z"/>
+    <path d="M117 44 C115 39 114 34 117 31 C120 34 119 39 117 44 Z"/>
+  </g>
+  <text x="100" y="160" text-anchor="middle" font-family="Arial Black, Arial, Helvetica, sans-serif" font-weight="900" font-size="29" fill="#111" letter-spacing="0.5">SYSTEMS</text>
+  <text x="101" y="181" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14.5" fill="#111" letter-spacing="6.2">LIFECYCLE</text>
+  <line x1="18" y1="185" x2="182" y2="185" stroke="#111" stroke-width="1"/>
+</svg>

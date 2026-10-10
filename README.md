@@ -1,11 +1,6 @@
-# Rachit Verma — work profile
+# Rachit Verma: Profile Website Final
 
-Three design directions of the same content.
+B2B Marketing & GTM Leader. Live at https://vermarac1.github.io/ (custom domain rachitverma.me once DNS is pointed).
 
-- `/`    — V1, warm editorial (bone paper, ink, brass · Newsreader + Inter)
-- `/v2/` — V2, warm bone + emerald, corridor hero, per-section treatments
-- `/v3/` — V3, light stone + emerald, bento grid throughout
-
-Source of truth is `~/70L/site/`: `index.html`, `v2.html`, `v3.html` are the editable
-sources with `__HEADSHOT_B64__` / `__CV_B64__` placeholders; the files published here
-have the headshot and CV inlined.
+The site root is the final version, built from `~/70L/site/src/index.html` with `python3 site/build.py`.
+`v1/` to `v4/` are earlier drafts, kept as an archive.
